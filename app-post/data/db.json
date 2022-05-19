@@ -1,0 +1,22 @@
+{
+    "blogs": [
+        {
+            "title": "Summer is comming!",
+            "body": "The sun is finally showing up and the first summer flowers are blooming",
+            "author":"nike",
+            "id": 1
+        },
+        {
+            "title": "Sun!",
+            "body": "The sun is enchanting and makes you want to stay in its heat",
+            "author":"emil",
+            "id": 2
+        },
+        {
+            "title": "Sun and trees.",
+            "body": "It goes fast, the buds of the trees stand out quickly now and from a distance they look green",
+            "author":"Ona",
+            "id": 3
+        }
+    ]
+}

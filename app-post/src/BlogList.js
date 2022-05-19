@@ -1,4 +1,4 @@
-const BlogList = ({blogs, title}) => {
+const BlogList = ({blogs, title }) => {
 
     return ( 
         <divc className="blog-list">
