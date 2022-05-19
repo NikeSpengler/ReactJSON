@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+/* base style */
+* {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.navbar h1 {
+  color: brown;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+
+.navbar a:hover {
+  color: brown;
+}
+
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* blog previews / list */
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px lightgray;
+}
+
+.blog-preview h2 {
+  font-size: 20px;
+  color: brown;
+  margin-bottom: 8px;
+}
