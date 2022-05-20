@@ -40,7 +40,7 @@
   padding: 20px;
 }
 
-/* blog previews / list */
+/* From bloglist/ preview */
 .blog-preview {
   padding: 10px 16px;
   margin: 20px 0;
@@ -55,4 +55,65 @@
   font-size: 20px;
   color: brown;
   margin-bottom: 8px;
+}
+
+.blog-preview a{
+  text-decoration: none;
+}
+
+/* Blog details page */
+.blog-details h2 {
+  font-size: 20px;
+  color: brown;
+  margin-bottom: 10px;
+}
+
+.blog-details div{
+  margin: 20px 0;
+}
+
+/* .blog-details button {
+  background: brown;
+  color: whitesmoke;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+
+} */
+
+/* create new blog form */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create h2 {
+  font-size: 20px;
+  color: brown;
+  margin-bottom: 30px;
+}
+
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid darkgray;
+  box-sizing: border-box;
+  display: block;
+}
+
+.create button {
+  background: brown;
+  color: whitesmoke;
+  border: 0;
+  padding: 8px;
+  border-radius: 0px;
+  cursor: pointer;
 }
