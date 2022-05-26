@@ -1,6 +1,15 @@
 import { Link } from 'react-router-dom';
+import SearchTable from './SearchTable';
 
-const BlogList = ({blogs, title }) => {
+// const SearchTable = document.querySelector('.search');
+
+
+//BlogList is connected to the BlogDetails.
+const BlogList = ({blogs, title, term }) => {
+    // if(term) {
+    //     blogs += `&q=${term}`;
+    // }
+
 
     return ( 
         <divc className="blog-list">
@@ -16,5 +25,10 @@ const BlogList = ({blogs, title }) => {
         </divc>
      );
 }
+
+// SearchTable.addEventListner('submit', (e) => {
+//     e.preventDefault();
+//     renderPosts(searchForm.term.value.trim());
+// })
  
 export default BlogList;

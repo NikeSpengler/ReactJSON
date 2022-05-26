@@ -36,7 +36,7 @@ const useFetch = (url) => {
                 }
             })
         }, 1000);
-        //makes switching between diffrent "fönster" more efficients
+        //makes switching between diffrent "sidor" more efficients
         return () => abortCont.abort();
     }, [url]);
     return { data, isPending, error }

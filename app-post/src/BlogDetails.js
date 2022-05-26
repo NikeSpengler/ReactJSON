@@ -5,23 +5,23 @@ import useFetch from "./useFetch";
 //trough this function specific blogpost are fetched, by "id"
 const BlogDetails = () => {
     const { id } = useParams();
-    const { data: blog, error, isPending } = useFetch('http://localhost:3000/blogs/?_sort=id' + id);
+    const { data: blog, error, isPending } = useFetch('http://localhost:8000/blogs/' + id);
     const history = useHistory();
 
 
     //Deleting a post
     const handleClick= () => {
-        fetch('http://localhost:3000/blogs/' + blog.id, {
+        fetch('http://localhost:8000/blogs/' + blog.id, {
             method: 'DELETE'
         }) .then(() => {
             history.push('/');
         })
     }
 
-    //Editing a post
+    //Editing a post -does not work yet
     const handleClick2= () => {
-        fetch('http://localhost:3000/blogs/' + blog.id, {
-            method: 'EDIT'
+        fetch('http://localhost:8000/blogs/' + blog.id, {
+            method: 'GET'
         }) .then(() => {
             history.push('/');
         })
