@@ -1,34 +1,38 @@
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import SearchTable from './SearchTable';
-
-// const SearchTable = document.querySelector('.search');
 
 
-//BlogList is connected to the BlogDetails.
-const BlogList = ({blogs, title, term }) => {
-    // if(term) {
-    //     blogs += `&q=${term}`;
-    // }
+//BlogList shows all blogs, at the top of the page there is a serach/filter functions by 'title'
+const BlogList = ({blogs, title }) => {
 
-
+    const [query, setQuery] = useState('');
+    
     return ( 
-        <divc className="blog-list">
-            <h2>{ title }</h2>
-            {blogs.map((blog) => (
-                <div className="blog-preview" key={ blog.id }>
-                    <Link to={`/blogs/${ blog.id }`}>
-                        <h2>{ blog.title }</h2>
-                        <p>Written by { blog.author }</p>
-                    </Link>
-                </div>
-            ))}
-        </divc>
+        <div className="blog-list">
+            <div className='search-input'>
+                <input className='input-field' 
+                    type="text" 
+                    name="term" 
+                    placeholder="Search..." 
+                    onChange={(e) => setQuery(e.target.value)}
+                ></input>
+            </div>
+            <div className='blog-list'>
+                <h2>{ title }</h2>
+                    {blogs.filter((blog) => 
+                        blog.title.toLowerCase().includes(query)
+                    ).map((blog) => (
+                        <p key={blog.id} className='search-list'>
+                             <Link to={`/blogs/${ blog.id }`}>
+                                <h2>{ blog.title }</h2>
+                                <p>Written by { blog.author }</p>
+                            </Link>
+                        </p>
+                    ))}
+            </div>
+        </div>
      );
 }
 
-// SearchTable.addEventListner('submit', (e) => {
-//     e.preventDefault();
-//     renderPosts(searchForm.term.value.trim());
-// })
  
 export default BlogList;

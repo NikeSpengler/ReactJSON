@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
 
-/* base style */
+/* ----- Basestyle ------ */
 * {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -40,28 +40,8 @@
   padding: 20px;
 }
 
-/* From bloglist/ preview */
-.blog-preview {
-  padding: 10px 16px;
-  margin: 20px 0;
-  border-bottom: 1px solid whitesmoke;
-}
 
-.blog-preview:hover {
-  box-shadow: 1px 3px 5px lightgray;
-}
-
-.blog-preview h2 {
-  font-size: 20px;
-  color: brown;
-  margin-bottom: 8px;
-}
-
-.blog-preview a{
-  text-decoration: none;
-}
-
-/* Blog details page */
+/* ----- Blogdetails page ------- */
 .blog-details h2 {
   font-size: 20px;
   color: brown;
@@ -77,12 +57,13 @@
   color: whitesmoke;
   border: 0;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 0px;
+  margin-right: 10px;
   cursor: pointer;
 
 }
 
-/* create new blog form */
+/* ----- Create new blog form -------*/
 .create {
   max-width: 400px;
   margin: 0 auto;
@@ -116,4 +97,34 @@
   padding: 8px;
   border-radius: 0px;
   cursor: pointer;
+}
+
+/*------- Bloglist and searchbar -------*/
+.search-input {
+  padding-bottom: 40px;
+  font-size: 18px;
+  border-radius: 0px;
+}
+
+.input-field{
+  margin: 5px;
+}
+.search-list {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.search-list:hover {
+  box-shadow: 1px 3px 5px lightgray;
+}
+
+.search-list h2 {
+  font-size: 20px;
+  color: brown;
+  margin-bottom: 8px;
+}
+
+.search-list a{
+  text-decoration: none;
 }

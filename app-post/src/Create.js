@@ -17,7 +17,7 @@ const Create = () => {
         setIsPending(true);
 
         //fetches new post and adds it to the db.json file
-        fetch('http://localhost:3000/blogs', {
+        fetch('http://localhost:8000/blogs', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             //converts data into json
@@ -53,9 +53,9 @@ const Create = () => {
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                 >
-                    <option value="nike">Nike</option>
-                    <option value="emil">Emil</option>
-                    <option value="ona">Ona</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Emil">Emil</option>
+                    <option value="Ona">Ona</option>
                 </select>
                 {!isPending && <button>Add Blog</button>}
                 {isPending && <button disabled>Adding blog...</button>}
