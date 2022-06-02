@@ -1,6 +1,11 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * 
+ * @returns This code returns all the blogs from collected in the JSIN file.
+ * There are also a "search" field where the user can search blogpots  by title. 
+ */
 
 //BlogList shows all blogs, at the top of the page there is a serach/filter functions by 'title'
 const BlogList = ({blogs, title }) => {

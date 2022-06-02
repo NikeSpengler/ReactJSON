@@ -1,5 +1,11 @@
 import { Link } from 'react-router-dom';
 
+/**
+ * 
+ * @returns This file is shown if the user types in a wrongly spelled address,
+ * and lets the user back to the homepage. 
+ */
+
 const NotFound = () => {
     return ( 
         <div className="not-found">

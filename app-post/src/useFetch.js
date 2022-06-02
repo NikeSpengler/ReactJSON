@@ -1,21 +1,27 @@
 import { useState, useEffect } from 'react';
 
-//custum react hook
+/**
+ * 
+ * @returns This file is helping with fetching data more smoothly and 
+ * are also error handling the website. 
+ */
+
+//Custum react hook
 const useFetch = (url) => {
-    //states
+    //States
     const [data, setData] = useState(null); 
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
 
-     //fetching the json data
+     //Fetching the json data
      useEffect(() => {
         const abortCont = new AbortController();
 
-        // setTimeOut makes the "loading..." show a bit longer, 1 sec.
+        // SetTimeOut makes the "loading..." show a bit longer, 1 sec.
         setTimeout(() => {
             fetch(url, { signal: abortCont.singal })
             .then(res => {
-                //if the response object not is ok, error coming back from the server
+                //If the response object not is ok, error coming back from the server
                 if(!res.ok) {
                     throw Error('Could not fetch the data for that resource...');
                 }
@@ -26,7 +32,7 @@ const useFetch = (url) => {
                 setIsPending(false);
                 setError(null);
             })
-            //catch error, and shows errormessage, also takes care of fetch error
+            //Catch error, and shows errormessage, also takes care of fetch error
             .catch(err => {
                 if (err.name === 'AbortError') {
                     console.log('Fetch aborted');
@@ -36,7 +42,7 @@ const useFetch = (url) => {
                 }
             })
         }, 1000);
-        //makes switching between diffrent "sidor" more efficients
+        //Makes switching between diffrent "sites" more efficient
         return () => abortCont.abort();
     }, [url]);
     return { data, isPending, error }
