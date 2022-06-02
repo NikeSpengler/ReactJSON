@@ -1,5 +1,5 @@
 # ReactJSON
-### This is a fullstack project made with React and a JSON server
+## A fullstack project made with React and a JSON server
 
 ### To get started, you can run:
 
