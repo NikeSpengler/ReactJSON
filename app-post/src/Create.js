@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
  * 
  * @returns This part of the code makes the user able to create a new post, 
  * which is collected by the JSON server in the JSOn file.
- */
+*/
 
 const Create = () => {
     //states
